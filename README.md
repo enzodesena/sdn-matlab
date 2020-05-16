@@ -1,6 +1,6 @@
 # Scattering Delay Network (SDN)
 
-These files implement the room acoustic simulator "Scattering Delay Network" (SDN) as described in [1] and [2]. If you use this code in your research publication, please make sure to cite [1].
+This is a Matlab implementation of the room acoustic simulator "Scattering Delay Network" (SDN) as described in [1] and [2]. If you use this code in your research publication, please make sure to cite [1].
 
 Please notice that this Matlab implementation was written quickly in 2010 for the purpose of showing results in [2], and is **extremely slow**, possibly because of the sample-by-sample operation and Matlab's inefficient handling of object-oriented programming. **The algorithm itself is actually orders of magnitude faster than even fft-based convolution. A dynamic C++ implementation exists which uses << 1% of a single core on a modern CPU.**
 
