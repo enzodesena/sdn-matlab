@@ -73,7 +73,7 @@ Run `sdn_tests`.
 
 The conceptual work to develop SDN was carried out by all authors in [1] and [2].
 
-The Matlab software was written by Enzo De Sena while he was a PhD student at King's college London in 2010. 
+The Matlab software in this repository was written by Enzo De Sena while he was a PhD student at King's college London in 2010. 
 
 * **Enzo De Sena** - [desena.org](https://desena.org)
 
