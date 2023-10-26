@@ -11,7 +11,7 @@ classdef PropLine < handle
     properties (Access='private')
         delayFilter
         nextFrame
-        
+        delaySamples
         junctionA
         junctionB
     end
@@ -26,13 +26,13 @@ classdef PropLine < handle
             distance = Position.distance(junctionA.position, junctionB.position);
             
             delay = distance / this.c;
-            delaySamples = round(delay .* FS);
+            this.delaySamples = round(delay .* FS);
             if nargin == 4
-                delaySamples = delaySamples + offset;
+                this.delaySamples = this.delaySamples + offset;
             end
             %this.delayFilter = dfilt.delay(delaySamples);
             %this.delayFilter.PersistentMemory = true;
-            this.delayFilter = DelayFilter(delaySamples);
+            this.delayFilter = DelayFilter(this.delaySamples);
             this.attenuation = (this.c./FS) ./ (distance);
             
             this.junctionA = junctionA;
